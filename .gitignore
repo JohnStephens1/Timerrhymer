@@ -2,3 +2,8 @@
 Timerrhymer.bat
 resources/
 venv/
+
+# pyinstaller
+build/
+dist/
+main.spec
