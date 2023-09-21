@@ -11,12 +11,6 @@ from vlc import MediaPlayer
 
 from pathlib import Path
 
-# TODO
-#  - make python display correct icon
-#  - fix lifting on timer trigger
-
-#  - remove commented code, TODOS
-
 
 APPLICATION_PATH = Path(os.path.dirname(__file__) if getattr(sys, 'frozen', True) else os.path.dirname(sys.executable))
 ALARM_PATH = APPLICATION_PATH / "resources/alarm.mp3"
@@ -55,14 +49,6 @@ def seconds_to_time_string(seconds):
 
     return time_string
 
-    # if days:
-    #     return f'{days}d {hours}h {minutes}m {seconds}s'
-    # if hours:
-    #     return f'{hours}h {minutes}m {seconds}s'
-    # if minutes:
-    #     return f'{minutes}m {seconds}s'
-    # return f'{seconds}s'
-
 
 def seconds_to_compact_time_string(seconds):
     days, hours, minutes, seconds = split_up_seconds(seconds)
@@ -80,7 +66,6 @@ def seconds_to_compact_time_string(seconds):
     return time_string
 
 
-# tk helpers
 def close_window(window, event):
     # event has to be accepted for tkinter to be happy
     window.destroy()
@@ -104,7 +89,6 @@ def centralize_window(window):
     window.geometry(f'{width}x{height}+{x}+{y}')
 
 
-# run
 def get_time():
     while True:
         try:
@@ -161,8 +145,8 @@ def start_timer(seconds):
     # window.attributes("-topmost", True)
     # window.lift()
     # window.focus_force()
-    window.attributes('-topmost', 1)
-    window.attributes('-topmost', 0)
+    window.attributes('-topmost', True)
+    window.attributes('-topmost', False)
     window.lift()
     window.focus_force()
     centralize_window(window)
@@ -178,7 +162,6 @@ def start_timer(seconds):
     window.mainloop()
 
 
-# main
 def main():
     fancy_time = get_time()
     seconds = fancy_time_to_seconds(fancy_time)
