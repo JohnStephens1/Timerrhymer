@@ -122,7 +122,7 @@ def get_time():
                 raise ValueError
         except ValueError:
             tk.messagebox.showinfo("Timerrhymer",
-                                   "Now bruv u didn't get how dis works now didja bruv, eh?.\nPls try again, will ya?")
+                                   "Improper formatting.\n\nPlease enter up to six digits.")
 
 
 def update_timer(window, text, seconds):
@@ -188,7 +188,7 @@ def main():
                               f"Confirm timer for {f'{compact_time_string} aka ' if seconds >= 60 else ''}{seconds}s."):
         start_timer(seconds)
     else:
-        tk.messagebox.showerror("Timerrhymer", "Well then fucking don't or whatever Jesus fucking Christ...")
+        tk.messagebox.showerror("Timerrhymer", "Well then maybe don't or whatever...")
         exit()
 
 
