@@ -6,10 +6,9 @@ from tkinter import simpledialog
 from tkinter import messagebox
 
 from functools import partial
+from pathlib import Path
 
 from vlc import MediaPlayer
-
-from pathlib import Path
 
 
 APPLICATION_PATH = Path(os.path.dirname(__file__) if getattr(sys, 'frozen', True) else os.path.dirname(sys.executable))
