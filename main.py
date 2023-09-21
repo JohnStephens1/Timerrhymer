@@ -21,8 +21,8 @@ from pathlib import Path
 
 
 APPLICATION_PATH = Path(os.path.dirname(__file__) if getattr(sys, 'frozen', True) else os.path.dirname(sys.executable))
-RELATIVE_ALARM_PATH = APPLICATION_PATH/"resources/alarm.mp3"
-RELATIVE_ICON_PATH = APPLICATION_PATH/"resources/good-head-wink.ico"
+ALARM_PATH = APPLICATION_PATH / "resources/alarm.mp3"
+ICON_PATH = APPLICATION_PATH / "resources/good-head-wink.ico"
 ALARM_VOLUME = 50
 
 
@@ -147,20 +147,16 @@ def update_timer(window, text, seconds):
         window.bind('<Return>', partial(close_window, window) )
         window.bind('<space>', partial(close_window, window))
 
-        alarm = MediaPlayer(get_resource_path(RELATIVE_ALARM_PATH))
+        alarm = MediaPlayer(ALARM_PATH)
         alarm.audio_set_volume(ALARM_VOLUME)
         alarm.play()
-
-
-def get_resource_path(relative_path):
-    return os.path.join(sys.prefix if hasattr(sys, "frozen") else os.path.dirname(__file__), relative_path)
 
 
 def start_timer(seconds):
     time_string = seconds_to_time_string(seconds)
 
     window = tk.Tk()
-    window.iconbitmap(get_resource_path(RELATIVE_ICON_PATH))
+    window.iconbitmap(ICON_PATH)
     window.geometry("500x150")
     # window.attributes("-topmost", True)
     # window.lift()
