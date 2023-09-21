@@ -16,8 +16,6 @@ from pathlib import Path
 #  - fix lifting on timer trigger
 
 #  - remove commented code, TODOS
-#
-#  - strip white spaces in input
 
 
 APPLICATION_PATH = Path(os.path.dirname(__file__) if getattr(sys, 'frozen', True) else os.path.dirname(sys.executable))
@@ -109,9 +107,9 @@ def centralize_window(window):
 # run
 def get_time():
     while True:
-        fancy_time = tk.simpledialog.askstring("Timerrhymer", "Please enter a time:")
-
         try:
+            fancy_time = tk.simpledialog.askstring("Timerrhymer", "Please enter a time:").replace(" ", "")
+
             if fancy_time is None:
                 exit()
             elif fancy_time == "":
@@ -123,6 +121,8 @@ def get_time():
         except ValueError:
             tk.messagebox.showinfo("Timerrhymer",
                                    "Improper formatting.\n\nPlease enter up to six digits.")
+        except AttributeError:
+            exit()
 
 
 def update_timer(window, text, seconds):
