@@ -9,24 +9,23 @@ from functools import partial
 
 from vlc import MediaPlayer
 
+from pathlib import Path
 
 # TODO
 #  - make python display correct icon
 #  - fix lifting on timer trigger
 
 #  - remove commented code, TODOS
-#  - figure out upload shenanigans, PyPl, GitHub, py2exe
 #
 #  - strip white spaces in input
 
 
-# Variables
-RELATIVE_ALARM_PATH = "resources/alarm.mp3"
-RELATIVE_ICON_PATH = "resources/good-head-wink.ico"
+APPLICATION_PATH = Path(os.path.dirname(__file__) if getattr(sys, 'frozen', True) else os.path.dirname(sys.executable))
+RELATIVE_ALARM_PATH = APPLICATION_PATH/"resources/alarm.mp3"
+RELATIVE_ICON_PATH = APPLICATION_PATH/"resources/good-head-wink.ico"
 ALARM_VOLUME = 50
 
 
-# formatting
 def fancy_time_to_seconds(fancy_time):
     total_seconds = 0
 
