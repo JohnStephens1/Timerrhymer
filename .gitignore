@@ -1,6 +1,5 @@
 .idea/
 Timerrhymer.bat
-resources/
 venv/
 
 # pyinstaller
