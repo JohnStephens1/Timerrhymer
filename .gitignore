@@ -7,5 +7,6 @@ venv/
 build/
 dist/
 main.spec
+Timerrhymer.spec
 
 get-exe.bat 
