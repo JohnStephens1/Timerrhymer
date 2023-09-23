@@ -1,20 +1,106 @@
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [So How Does It Work](#so-how-does-it-work)
-   1. [Hotkeys](#hotkeys)
+1. [Let's Get Right Into It](#lets-get-right-into-it)
+   1. [Let's Go Through An Example](#lets-go-through-an-example)
+   2. [The Beauty...](#the-beauty)
+   3. [Uses](#uses)
 3. [How to Install](#how-to-install)
-4. [More Tools](#more-tools)
+4. [More Tools From Me](#more-tools-from-me)
 5. [Support](#support)
 
 
-## Introduction
+## Let's Get Right Into It
+
+It's quite straight forward.
+
+![Greeting](readme-images/greeting.PNG "Unos titleos?")
+
+What makes _Timerrhymer_ unique (apart from its astonishing display of beauty) is the way the time is formatted.
+
+A table with examples should be clearer than any explanation:
+
+| Input  | Rendered Time |
+|--------|---------------|
+|        |               |
+| 45     | 45s           |
+| 130    | 1m 30s        |
+| 4500   | 45m 00s       |
+| 13000  | 1h 30m 00s    |
+| 123456 | 12h 34m 56s   |
+
+You can even enter things like 90 seconds or 90 minutes.
+
+| Input | Rendered Time |
+|-------|---------------|
+|       |               |
+| 90    | 1m 30s        |
+| 9000  | 1h 30m 00s    |
+| 9090  | 1h 31m 30s    |
+
+You can also add spaces wherever you like, if that's what you're into.
+
+| Input                         | Rendered Time |
+|-------------------------------|---------------|
+|                               |               |
+| 13000                         | 1h 30m 00s    |
+| 1 30 00                       | 1h 30m 00s    |
+| &nbsp; 13 &ensp; 0 &ensp; 0 0 | 1h 30m 00s    |
+<br>
+
+### Let's Go Through An Example!
+
+Let's say we want a timer for 12h 34m 56s. So we enter:
+
+![greeting-filled](readme-images/greeting-filled-out.PNG)
+
+and hit _enter_, or click _OK_ if our keyboard fell out of a skyscraper.
+<br>
+
+Then, _Timerrhymer_ is nice enough to inform us of the result of the time we entered and asking us for confirmation.
+
+![stage-2](readme-images/stage-2.PNG)
+
+In this example you can clearly see why this time format is substantially simpler than entering the required seconds for example.
+<br>
+
+Since the formatted time is correct, let's hit _enter_ again.
+
+![stage-2](readme-images/semi-finalee.PNG)
+
+And there we go! Our timer is running, happily ticking away wherever you like to put it. Minimizing it works just fine as well of course.
+
+Hovering over the windows icon in the taskbar shows us the remaining time as well.
+
+And once the time runs out, _Timerrhymer_ gently informs us of this matter by coming into the foreground and playing a sweet lullaby to gently pry our attention away from whatever we were doing.
+
+To close the window once the alarm goes off, bring it into focus and press _space_, _enter_ or _escape_, and _Timerrhymer_ will shut down.
+
+### The Beauty...
+
+...lies in its simplicity.
+
+So _Timerrhymer_'s whole lifecycle looks like this:
+1. start _Timerrhymer_
+2. enter time
+3. hit _enter_ 2 times
+
+and you're done! Timer's going, and you can go along your business again as well, a matter of 5 seconds.
 
 
+### Uses
 
-## So How Does It Work
+The core uses for _Timerrhymer_ are
+- doing something for _n_ minutes <br>
+or
+- doing something in _n_ minutes
 
-space and escape to close
-time formatting in table
+Examples for my personal primary uses for which I can highly recommend it:
+
+- getting food out of the oven in _n_ minutes
+- or out of the pot in _n_ minutes <br>
+and
+- leaving in _n_ minutes
+- relaxing before studying in _n_ minutes and
+- studying for _m_ minutes before taking a break (for _n_ minutes before studying for...)
 
 
 ## How to Install
@@ -34,14 +120,14 @@ python -m pip install -r requirements.txt
 ```
 
 
-## More Tools
+## More Tools From Me
 
 If you enjoyed _Timerrhymer_, feel free to check out my other quality-of-life tools, all free and open-source as well, no ads and no nonsense.
 
 _(coming soon)_
-- ShutDownEr: xxx
-- BingerBoi: xxx
-- 4Focus: https://github.com/JohnStephens1/4Focus
+- _ShutDownEr_: xxx
+- _BingerBoi_: xxx
+- _4Focus_: https://github.com/JohnStephens1/4Focus
 
 ## Support
 
