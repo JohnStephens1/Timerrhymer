@@ -3,9 +3,9 @@
    1. [Let's Go Through An Example](#lets-go-through-an-example)
    2. [The Beauty...](#the-beauty)
    3. [Uses](#uses)
-3. [How to Install](#how-to-install)
-4. [More Tools From Me](#more-tools-from-me)
-5. [Support](#support)
+2. [How to Install](#how-to-install)
+3. [More Tools From Me](#more-tools-from-me)
+4. [Support](#support)
 
 
 ## Let's Get Right Into It
