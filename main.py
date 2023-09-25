@@ -8,11 +8,11 @@ from tkinter import messagebox
 from functools import partial
 from pathlib import Path
 
-from vlc import MediaPlayer
+from playsound import playsound
 
 
 APPLICATION_PATH = Path(os.path.dirname(__file__) if getattr(sys, 'frozen', True) else os.path.dirname(sys.executable))
-ALARM_PATH = APPLICATION_PATH / "resources/alarm.mp3"
+ALARM_PATH = APPLICATION_PATH / "resources/small_alarm.wav"
 ICON_PATH = APPLICATION_PATH / "resources/good-head-wink.ico"
 ALARM_VOLUME = 50
 
@@ -127,12 +127,10 @@ def update_timer(window, text, seconds):
         window.update()
         window.focus()
 
-        window.bind('<Return>', partial(close_window, window) )
+        window.bind('<Return>', partial(close_window, window))
         window.bind('<space>', partial(close_window, window))
 
-        alarm = MediaPlayer(ALARM_PATH)
-        alarm.audio_set_volume(ALARM_VOLUME)
-        alarm.play()
+        playsound(str(ALARM_PATH), block=False)
 
 
 def start_timer(seconds):
