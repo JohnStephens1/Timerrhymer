@@ -94,7 +94,7 @@ def get_time():
             fancy_time = tk.simpledialog.askstring("Timerrhymer", "Please enter a time:").replace(" ", "")
 
             if fancy_time is None:
-                exit()
+                sys.exit()
             elif fancy_time == "":
                 return "0"
             elif 1000000 > int(fancy_time) >= 0:
@@ -169,7 +169,7 @@ def main():
         start_timer(seconds)
     else:
         tk.messagebox.showerror("Timerrhymer", "Well then maybe don't or whatever...")
-        exit()
+        sys.exit()
 
 
 if __name__ == '__main__':
