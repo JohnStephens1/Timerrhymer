@@ -105,7 +105,7 @@ def get_time():
             tk.messagebox.showinfo("Timerrhymer",
                                    "Improper formatting.\n\nPlease enter up to six digits.")
         except AttributeError:
-            exit()
+            sys.exit()
 
 
 def update_timer(window, text, seconds):
